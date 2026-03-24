@@ -1,0 +1,19 @@
+# Texas Crop Yield Analysis (2024)
+
+## 📁 Repository Structure
+* **main.ipynb**: Core analysis and Machine Learning modeling using soil data.
+* **analysis_copy.ipynb**: Data collection scripts (USDA API for soil, NOAA for 2024 weather).
+* **data/**
+    * **texas.csv**: Processed soil data in Texas.
+    * **texas_weather_2024.csv**: Monthly weather summary (Precipitation, TMAX, TMIN).
+* **requirements.txt**: List of necessary Python libraries.
+
+
+## 🛠 Installation
+To set up the environment, run:
+```bash
+pip install -r requirements.txt
+
+Unfortunately, the soil data don't have time frame, they are updated every single year (I think). 
+Thus it is impossible to combine soil dataset with weather data which have the time frame. 
+So I think we just make models using soil data and analyze with it after that to make some insight. 
