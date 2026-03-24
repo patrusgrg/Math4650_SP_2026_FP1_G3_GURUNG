@@ -1,3 +1,7 @@
+## In class update
+We collected soil and weather in 2025 data in Texas
+Performed some EDA
+We are planning to keep doing EDA and make models
 
 ======================================================================
   MATH 4650 FINAL PROJECT — COMPLETE RESULTS REPORT
@@ -134,7 +138,3 @@
 To set up the environment, run:
 ```bash
 pip install -r requirements.txt
-
-## In class update
-We collected soil and weather in 2025 data in Texas
-Performed some EDA
