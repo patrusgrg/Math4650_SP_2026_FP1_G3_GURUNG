@@ -135,6 +135,6 @@ To set up the environment, run:
 ```bash
 pip install -r requirements.txt
 
-Unfortunately, the soil data don't have time frame, they are updated every single year (I think). 
-Thus it is impossible to combine soil dataset with weather data which have the time frame. 
-So I think we just make models using soil data and analyze with it after that to make some insight. 
+## In class update
+We collected soil and weather in 2025 data in Texas
+Performed some EDA
