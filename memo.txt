@@ -1,4 +1,4 @@
 ## Need to consider 
 * Do we need to include all the type of crops? There are crops that has only few datapoints.
 * Compname (too specific and size is large) and taxorder
-* om and cec7 (High correlation, might be multicolinearity)
+* om and cec7 (High correlation, might be multicolinearity) think to drop cec7 which has a lot of missing values
