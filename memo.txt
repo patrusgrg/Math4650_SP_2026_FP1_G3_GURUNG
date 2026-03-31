@@ -2,3 +2,18 @@
 * Do we need to include all the type of crops? There are crops that has only few datapoints.
 * Compname (too specific and size is large) and taxorder
 * om and cec7 (High correlation, might be multicolinearity) think to drop cec7 which has a lot of missing values
+
+
+Soil data dictionary
+https://sdmdataaccess.sc.egov.usda.gov/documents/TableColumnDescriptionsReport.pdf
+
+Weather data
+https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt
+https://transition.fcc.gov/oet/info/maps/census/fips/fips.txt
+https://www.ncei.noaa.gov/pub/data/ghcn/daily/by_year/readme-by_year.txt
+https://geo.fcc.gov/api/census/
+
+areasymbol: The combination of abbreviation of states and FIPS code, which is not specified
+any document as long as I searched because it happens that small areas integrated to collect data/
+Therefore, the number that is not FIPS code sometimes appear in the dataset.
+
