@@ -6,12 +6,14 @@
 
 Soil data dictionary
 https://sdmdataaccess.sc.egov.usda.gov/documents/TableColumnDescriptionsReport.pdf
+https://sdmdataaccess.sc.egov.usda.gov/WebServiceHelp.aspx#SDMTabularService
 
 Weather data
 https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt
 https://transition.fcc.gov/oet/info/maps/census/fips/fips.txt
 https://www.ncei.noaa.gov/pub/data/ghcn/daily/by_year/readme-by_year.txt
 https://geo.fcc.gov/api/census/
+https://www.weather.gov/media/pimar/FIPS/tx_cnty.pdf
 
 areasymbol: The combination of abbreviation of states and FIPS code, which is not specified
 any document as long as I searched because it happens that small areas integrated to collect data/
