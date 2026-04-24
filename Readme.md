@@ -153,7 +153,6 @@ Below are the evaluation metrics produced by the notebooks and where to find the
 - Classification (`notebooks/crop_classification.ipynb`):
 	- Primary metrics: **Accuracy**, **Geometric Mean (G-Mean)** (weighted where applicable).
 	- Secondary outputs: **Confusion Matrix** visualizations and per-fold Stratified K-Fold scores (mean ± std).
-	- Saved outputs: look for `cv_gmean_results.png` and confusion-matrix plots in the notebook directory or save them into `Images/outputs/`.
 	- How to reproduce: run `notebooks/crop_classification.ipynb` top-to-bottom; the notebook prints per-run accuracy and G-Mean and runs cross-validation that reports fold G-Mean values and averages.
 
 - Yield prediction (`notebooks/yield_prediction.ipynb`):
