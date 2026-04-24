@@ -1,4 +1,4 @@
-# Texas Crop Yield & Weather Modeling — Math 4650 Final Project
+# Crops Classification and Crop Yield Prediction of Texas Dataset — Math 4650 Final Project
 
 ## Project overview
 This project provides a reproducible pipeline and analysis for addressing practical problems in crop agriculture: recommending suitable crops for a location and forecasting crop yields using soil and weather data.
