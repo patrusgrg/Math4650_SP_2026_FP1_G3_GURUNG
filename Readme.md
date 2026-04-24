@@ -23,10 +23,7 @@ Limitations & next steps:
 ## Data
 The `data/` folder contains the datasets used for analysis and modeling:
 - `texas_weather_2015_2025.csv` — weather observations 2015–2025
-- `texas_weather_2025.csv` — 2025 weather subset
-- `texas.csv`, `texas2.csv` — auxiliary weather/merged files
-- `tx_merged_yield_weather_soil.csv` — merged yield, weather, and soil features
-- `tx_ml_ready.csv` — ML-ready dataset for training/evaluation
+- `texas.csv` — soil data file
 - `ghcnd-stations.txt` — station metadata
 
 ## Notebooks
@@ -34,10 +31,6 @@ Open the `notebooks/` folder to explore analyses and reproductions:
 - `data_collection.ipynb`, `data_collection_for_texas.ipynb` — data ingestion & cleaning
 - `crop_classification.ipynb` — modeling experiments
 - `yield_prediction.ipynb` — yield prediction workflow
-- `tx_merged_yield_weather_soil.csv` exploration and model training notebooks
-
-## Trained model
-- `notebooks/best_model.pt` — serialized PyTorch model (example trained checkpoint used in experiments).
 
 ## Repository structure
 
