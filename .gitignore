@@ -1,3 +1,34 @@
+# Python artifacts
+__pycache__/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Data: do NOT commit raw datasets
+/data/*.csv
+/data/*.parquet
+/data/*.zip
+
+# Models / checkpoints
+*.pt
+notebooks/*.pt
+best_model.pt
+
+# Images: ignore everything in Images except Images/outputs/
+Images/*
+!Images/outputs/
+!Images/outputs/**
+
+# Optional: ignore local IDE settings
+.vscode/
+*.env
+.env
 /.venv
 /allen.zip
 /bartholomew.zip
