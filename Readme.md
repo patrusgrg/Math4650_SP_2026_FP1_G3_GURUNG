@@ -55,10 +55,11 @@ pip install -r requirements.txt
 
 ## Usage
 - Launch Jupyter Lab/Notebook and open the notebooks in `notebooks/` to run analyses and reproduce results.
+- To run the crop classification workflow, open `notebooks/crop_classification.ipynb` and run cells top-to-bottom.
 - To run the yield prediction workflow, open `notebooks/yield_prediction.ipynb` and run cells top-to-bottom.
 
 ## Reproducing training
-All training/experimentation steps are in the notebooks. To retrain models, run the relevant notebook cells that produce `best_model.pt`.
+All training/experimentation steps are in the notebooks. 
 
 ## Notes & next steps
 - Continue EDA and feature engineering to improve model generalization.
@@ -77,7 +78,7 @@ This project uses real-world data sources and an API-driven ETL step to collect 
 
 - NOAA GHCND (Global Historical Climatology Network - Daily) via the NOAA/Cdo Web API — used to fetch growing-season weather metrics by station. The data collection notebook (`notebooks/data_collection.ipynb`) includes the API calls and produces derived CSVs such as `noaa_weather_fixed.csv`.
 - Soil survey / SSURGO-style soil property tables (provided as `data/texas.csv`).
-- Merged datasets for analysis (`data/tx_merged_yield_weather_soil.csv`, `data/tx_ml_ready.csv`) are created by combining soil, weather, and yield records.
+
 
 Security note: API tokens (NOAA or others) MUST NOT be committed. The data collection notebook currently references a `NOAA_TOKEN` variable; remove any hard-coded tokens and instead set an environment variable (example):
 
@@ -103,12 +104,11 @@ All experiments and detailed numeric results are recorded in the notebooks. Belo
 - **Yield prediction (notebooks/yield_prediction.ipynb)**
 	- Models implemented: Polynomial Lasso regression (PolynomialFeatures + Lasso), XGBoost regressor (`XGBRegressor`), and a PyTorch neural network regressor.
 	- Evaluation metrics: Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and R² (coefficient of determination). K-fold CV metrics and RMSE plots are produced in the notebook.
-	- Outcomes: trained neural regressor saves `best_model.pt` via early stopping; numeric results (RMSE, R²) are printed in the notebook. Re-run `notebooks/yield_prediction.ipynb` to reproduce the reported metrics locally.
+	- Outcomes: Numeric results (RMSE, R²) are printed in the notebook. Re-run `notebooks/yield_prediction.ipynb` to reproduce the reported metrics locally.
 
 Where outputs are saved
 
 - Plots produced by notebooks are expected to be saved to the working directory (the notebooks currently call `plt.savefig('cv_gmean_results.png', ...)` in several places). To keep the repo clean, move or save final figures into `Images/outputs/` before committing.
-- Model checkpoints (e.g., `best_model.pt`) are saved locally by the notebooks but are excluded by `.gitignore`. If you want to share a checkpoint, upload it to external storage and add a small README pointer.
 
 Reproducing results
 
@@ -121,9 +121,6 @@ The primary datasets used by the notebooks are:
 
 - `data/texas.csv` — soil survey / soil property table (used for soil features)
 - `data/texas_weather_2015_2025.csv` — weather observations (monthly/growing-season aggregates)
-- `data/texas_weather_2025.csv` — 2025 weather subset (used selectively)
-- `data/tx_merged_yield_weather_soil.csv` — merged dataset combining yield, weather, and soil (analysis-ready)
-- `data/tx_ml_ready.csv` — ML-ready processed dataset (if present)
 - `data/ghcnd-stations.txt` — station metadata used for data collection/ETL
 
 Note: Some notebooks produce intermediate files (for example `noaa_weather_fixed.csv` from the data collection notebook). Treat generated CSVs as derived artifacts — keep them locally but do not commit large raw datasets to the repo.
@@ -133,7 +130,6 @@ Recommended workflow to keep the repo small and clean:
 
 1. Place final figures you want to keep in `Images/outputs/` (create this folder). Only files inside `Images/outputs/` are intended to be committed.
 2. Keep raw/large datasets inside `data/` on your machine but do not add them to git. Use external storage (Google Drive, S3, or dataset managers) for sharing large files.
-3. Save model checkpoints locally (e.g. `best_model.pt`) but avoid committing them to the repository. If you must share a checkpoint, upload it to external storage and include a small README pointer.
 
 ## .gitignore (created)
 A `.gitignore` file has been added to this repository to help avoid accidental commits of large or unwanted files. It ignores common large artifacts (data, environments, model files) and keeps only `Images/outputs/` for committed figures.
